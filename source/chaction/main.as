@@ -317,6 +317,7 @@
 			video.y = coor["y"];
 			this.addChildAt(video,0);
 			video.attachNetStream(V["netStream"]);
+			video.smoothing=true;
 			if (!streamObject.hasOwnProperty("metaData")) {
 				return;
 			}
