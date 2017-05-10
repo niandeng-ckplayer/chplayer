@@ -30,7 +30,7 @@
 				previewscale:6,//预览图时间间隔
 				prompt:"",//提示点内容
 				prompttime:"",//提示点时间
-				logo:"chplayer",
+				logo:"",
 				debug:0
 			}
 			config=script.mergeObject(config,flashvars);
