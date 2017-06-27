@@ -204,8 +204,13 @@
 				clear();
 			}
 			var protocol: String = videoUrl.substr(0, 4);
+			trace(protocol);
 			switch (protocol) {
-				case "http":
+				case "rtmp":
+					var rtmpStream: rtmpstream = new rtmpstream();
+					V["player"] = rtmpStream;
+					break;
+				default:
 					if (playUrlTemp[playNumber][2] == ".m3u8") {
 						var httpM3u8: httpm3u8 = new httpm3u8();
 						httpM3u8.stage = stage;
@@ -216,13 +221,6 @@
 						
 					}
 					V["player"].F = flashVars;
-					break;
-				case "rtmp":
-					var rtmpStream: rtmpstream = new rtmpstream();
-					V["player"] = rtmpStream;
-					break;
-				default:
-					streamNotFound();
 					break;
 			}
 

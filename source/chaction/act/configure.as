@@ -12,7 +12,7 @@
 			// constructor code
 			var config: Object = {
 				variable:"chplayer",
-				video: "",
+				video: "/up/1.flv",
 				poster:"",
 				volume: 0.8,
 				autoplay: 0,
