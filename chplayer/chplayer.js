@@ -3316,7 +3316,7 @@
 						thisTemp.CB['timeText'].innerHTML = thisTemp.getNowDate();
 					}
 				};
-				this.timerTime = new timer(1000, timeFun);
+				this.timerTime = new this.timer(1000, timeFun);
 				//timerTime.start();
 			}
 			this.definition();
