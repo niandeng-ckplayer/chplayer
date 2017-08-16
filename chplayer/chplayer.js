@@ -786,7 +786,7 @@
 			this.getByElement(pauseCenterID).innerHTML = this.newCanvas(pauseCenterID, 80, 80); //构建中间暂停按钮
 			this.getByElement(loadingID).innerHTML = this.newCanvas(loadingID, 60, 60); //构建中间缓冲时显示的图标
 			this.getByElement(errorTextID).innerHTML = this.language['error']; //构建错误时显示的文本框
-			this.getByElement(logoID).innerHTML = this.logo; //构建logo
+			this.getByElement(logoID).innerHTML = this.vars['logo'] || this.logo; //构建logo
 			//CB:Object：全局变量，将一些全局需要用到的元素统一放在CB对象里
 			var pd=this.PD;
 			this.CB = {
@@ -3316,7 +3316,7 @@
 						thisTemp.CB['timeText'].innerHTML = thisTemp.getNowDate();
 					}
 				};
-				this.timerTime = new timer(1000, timeFun);
+				this.timerTime = new this.timer(1000, timeFun);
 				//timerTime.start();
 			}
 			this.definition();
